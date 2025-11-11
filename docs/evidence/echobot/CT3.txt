@@ -1,0 +1,5 @@
+Hello! I'm your echo bot.
+Tell me something and press enter:
+*** Booting Zephyr OS build zephyr-v40200 ***
+---- Sent utf8 encoded message: "hello we and philip wanted to say hi! :)\r" ----
+Echo: hello we and philip wanted to

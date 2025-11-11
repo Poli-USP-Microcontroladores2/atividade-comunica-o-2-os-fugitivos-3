@@ -40,20 +40,32 @@ Link usado como referência:
 
 ### CT1 – Eco básico
 
-* Entrada:
-* Saída esperada:
-* Critério de Aceitação:
+* Entrada:Ricardo e Philip
+* Saída esperada:Ricardo e Philip
+* Critério de Aceitação:string com menos de 32 carácteres. contando com new lines e returns 
+
+referência:docs\evidence\echobot\CT1.txt
 
 ### CT2 – Linha vazia
+* Entrada:
+* Saída esperada:
+
+referência:docs\evidence\echobot\CT2.txt
 
 ### CT3 – Linha longa
 
-(Adicionar mais casos se necessário.)
+* Entrada:hello we and philip wanted to say hi! :)
+* Saída esperada:hello we and philip wanted to say hi! :)
+* Saída Real:hello we and philip wanted to
+
+houve o corte da mensagem pois extrapola o limite de 32 chars.
+
+referência:docs\evidence\echobot\CT3.txt
 
 ## 3.3 Implementação
 
-* Arquivo(s) modificados:
-* Justificativa das alterações:
+* Arquivo(s) modificados: main.c e proj.config
+* Justificativa das alterações: implementar/autualizar o código para enviar mensagens no modelo URT por interrupções no zephyr
 
 ## 3.4 Evidências de Funcionamento
 
