@@ -1,0 +1,8 @@
+[00:00:10.004,000] ␛[0m<inf> com_sample: Cycle 1: Initiating 3 output messages␛[0m
+[00:00:10.009,000] ␛[0m<inf> com_sample: RX functionality deactivated␛[0m
+--- local echo active ---
+aDATA_PACKET 2.0
+DATA_PACKET 2.1
+DATA_PACKET 2.2
+aaaaaaa[00:00:15.009,000] ␛[0m<inf> com_sample: Cycle 2: Initiating 3 output messages␛[0m
+[00:00:15.013,000] ␛[0m<inf> com_sample: RX functionality activated␛[0m

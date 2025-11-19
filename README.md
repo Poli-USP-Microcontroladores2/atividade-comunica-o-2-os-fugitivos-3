@@ -7,8 +7,8 @@ Atividade: Comunicação UART
 
 * Dupla:
 
-  * Integrante 1:
-  * Integrante 2:
+  * Integrante 1: Philip William (NUSP 16897414)
+  * Integrante 2: Ricardo Peloso (NUSP ...)
 
 * Objetivo: implementar, testar e documentar aplicações de comunicação UART baseadas nos exemplos oficiais “echo_bot” e “async_api”, utilizando desenvolvimento orientado a testes, diagramas de sequência D2 e registro de evidências.
 
@@ -112,8 +112,8 @@ Link usado como referência:
 
 ## 4.3 Implementação
 
-* Arquivos modificados:
-* Motivos/Justificativas:
+* Arquivos modificados: main.c, prj.conf, platformio.ini
+* Motivos/Justificativas: No código original, erros aconteciam por conta da falta de suporte DMA do driver MCUX na placa FRDM. Por conta disso, o código até compilava, porém não rodava como o esperado. Desse modo, alterou-se o código para uma espécie de API orientada a interrupção, que contorna a falta de suporte ao Async API na placa FRDM, gerando resultados extremamente semelhantes sem sacrificar a lógica da atividade.
 
 ## 4.4 Evidências de Funcionamento
 
@@ -148,5 +148,5 @@ Adicionar arquivos (diagrama completo e o código-base para geração do diagram
 
 # 5. Conclusões da Dupla
 
-* O que deu certo:
-* O que foi mais desafiador:
+* O que deu certo: Conseguimos implementar a lógica de alternância de estado TX/RX do Async API do Zephyr e validar o timing de 5 segundos entre os ciclos, comprovando que o controle assíncrono do fluxo de comunicação está funcionando. O sucesso do projeto foi alcançado ao identificar e contornar as restrições de hardware da placa.
+* O que foi mais desafiador: O principal obstáculo foi o diagnóstico de runtime do erro (-134) durante as tentativas de uso do Async API original. Esse erro revelou que a placa FRDM-KL25Z não possuía o suporte de hardware (DMA) necessário para a API Assíncrona. Em vez de utilizar o overlay e forçar o DMA (que gerava erros de compilação), a decisão foi migrar a arquitetura de I/O para a API Orientada a Interrupção como uma forma de contornar a limitação e mesmo assim manter a lógica. Isso resolveu o problema de compatibilidade e permitiu a implementação funcional da lógica assíncrona.

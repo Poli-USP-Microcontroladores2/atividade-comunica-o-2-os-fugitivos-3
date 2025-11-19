@@ -1,0 +1,5 @@
+[00:00:05.000,000] ␛[0m<inf> com_sample: Cycle 0: Initiating 3 output messages␛[0m
+DATA_PACKET 1.0
+DATA_PACKET 1.1
+DATA_PACKET 1.2
+[00:00:05.004,000] ␛[0m<inf> com_sample: RX functionality activated␛[0m
